@@ -54,5 +54,3 @@ stack.add("Third");
 console.log(stack);
 console.log(stack.remove());
 console.log(stack);
-
-// QUEUE
