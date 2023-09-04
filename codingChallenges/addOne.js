@@ -19,9 +19,3 @@ function addOne(num) {
 }
 
 console.log(addOne(1));
-
-// OPTION 3
-function addOne(number) {
-  return number + 1;
-}
-console.log(addOne(5));
