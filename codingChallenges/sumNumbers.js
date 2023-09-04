@@ -7,3 +7,17 @@
 // sumNumbers([5, 10]) //=> 15
 // sumNumbers([2, 10, -5]) //=> 7
 // sumNumbers([]) //=> 0
+
+function sumNumbers(numArray) {
+  if (numArray.length === 0) {
+    return 0;
+  } else {
+    let sum = 0;
+    for (let i = 0; i < numArray.length; i++) {
+      sum += numArray[i];
+    }
+    return sum;
+  }
+}
+
+console.log(sumNumbers([1, 2, 3, 4]));
