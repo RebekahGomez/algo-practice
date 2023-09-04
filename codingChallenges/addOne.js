@@ -5,9 +5,23 @@
 // addOne(1) //=> 2
 // addOne(-5) //=> -4
 
+// OPTION 1
 function addOne(num) {
   num += 1;
   return num;
 }
 
+console.log(addOne(5));
+
+// OPTION 2
+function addOne(num) {
+  return num + 1;
+}
+
+console.log(addOne(1));
+
+// OPTION 3
+function addOne(number) {
+  return number + 1;
+}
 console.log(addOne(5));
