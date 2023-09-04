@@ -7,3 +7,13 @@
 // addTwoNumbers(10, -2) //=> 8
 // addTwoNumbers(0, 0) //=> 0
 // addTwoNumbers('Hello', 5) //=> NaN
+
+function addTwoNumbers(num1, num2) {
+  if (typeof num1 !== "number" || typeof num2 !== "number") {
+    return NaN;
+  } else {
+    return num1 + num2;
+  }
+}
+
+console.log(addTwoNumbers("three", "one"));
