@@ -27,3 +27,5 @@ function addTwoNumbers(a, b) {
     return NaN;
   }
 }
+
+console.log(addTwoNumbers(2, 3));
