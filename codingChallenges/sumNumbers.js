@@ -12,9 +12,9 @@ function sumNumbers(numArray) {
   if (numArray.length === 0) {
     return 0;
   } else {
-    let sum = 0;
+    let sum = 0; // initialize accumulator variable
     for (let i = 0; i < numArray.length; i++) {
-      sum += numArray[i];
+      sum += numArray[i]; // don't forget to actually add up the values in [i]
     }
     return sum;
   }
