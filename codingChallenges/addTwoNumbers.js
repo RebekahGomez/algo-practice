@@ -8,6 +8,7 @@
 // addTwoNumbers(0, 0) //=> 0
 // addTwoNumbers('Hello', 5) //=> NaN
 
+// OPTION 1
 function addTwoNumbers(num1, num2) {
   if (typeof num1 !== "number" || typeof num2 !== "number") {
     return NaN;
@@ -17,3 +18,12 @@ function addTwoNumbers(num1, num2) {
 }
 
 console.log(addTwoNumbers("three", "one"));
+
+// OPTION 2 - COULD EASILY FLIP THE IF STATEMENT AROUND
+function addTwoNumbers(a, b) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  } else {
+    return NaN;
+  }
+}
