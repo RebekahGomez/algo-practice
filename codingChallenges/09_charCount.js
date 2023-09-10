@@ -11,10 +11,32 @@
 // //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i: 2, s: 2, f: 1, n: 1, t: 2, c: 1, '!': 1 }
 
 // OPTION 1: USING A FOR LOOP
+// function charCount(str) {
+//   let result = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str.charAt(i);
+//     if (result[char]) {
+//       result[char]++;
+//     } else {
+//       result[char] = 1;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(charCount("interesting"));
+// charAt() is a method available to strings - it allows you to access a specific character in a string based on index
+// For each position "i" in the string "str" we're grabbing the character at that position
+// and storing it in the variable "char"
+// If the "char" already exists as a key in the "result" object, then we increase its value by 1
+// But if the "char" doesn't exist in the "result" object, then we add it as a new key
+// with a value of 1
+
+// OPTION 2: BRACKET NOTATION
 function charCount(str) {
   let result = {};
   for (let i = 0; i < str.length; i++) {
-    let char = str.charAt(i);
+    let char = str[i];
     if (result[char]) {
       result[char]++;
     } else {
@@ -25,9 +47,3 @@ function charCount(str) {
 }
 
 console.log(charCount("interesting"));
-// charAt() is a method available to strings - it allows you to access a specific character in a string based on index
-// For each position "i" in the string "str" we're grabbing the character at that position
-// and storing it in the variable "char"
-// If the "char" already exists as a key in the "result" object, then we increase its value by 1
-// But if the "char" doesn't exist in the "result" object, then we add it as a new key
-// with a value of 1
