@@ -4,8 +4,12 @@
 // Examples:
 // reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 
-function reverseUpcaseString(singleString) {
-  let result = singleString.toUpperCase();
+// OPTION 1 BUILT-IN METHODS
+function reverseUpcaseString(str) {
+  let splitStr = str.split("");
+  let reverseStr = splitStr.reverse("");
+  let joinStr = reverseStr.join("");
+  let result = joinStr.toUpperCase("");
   return result;
 }
 
