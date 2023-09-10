@@ -9,12 +9,24 @@
 // computeRemainder(4,0) //=> Infinity
 // computeRemainder(10.5, 3) //=> 1.5
 
-function computeRemainder(num1, num2) {
-  if (num2 === 0) {
+// OPTION 1 USING MODULUS % OPERATOR
+// function computeRemainder(num1, num2) {
+//   if (num2 === 0) {
+//     return Infinity;
+//   }
+//   let answer = num1 % num2;
+//   return answer;
+// }
+
+// console.log(computeRemainder(10.5, 2));
+
+// OPTION 2 WITHOUT % OPERATOR
+function computeRemainder(dividend, divisor) {
+  if (divisor === 0) {
     return Infinity;
   }
-  let answer = num1 % num2;
-  return answer;
+  let remainder = dividend - divisor * Math.floor(dividend / divisor);
+  return remainder;
 }
 
-console.log(computeRemainder(9, 0));
+console.log(computeRemainder(10.5, 2));
