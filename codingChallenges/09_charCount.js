@@ -33,11 +33,26 @@
 // with a value of 1
 
 // OPTION 2: BRACKET NOTATION
+// function charCount(str) {
+//   let result = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+//     if (result[char]) {
+//       result[char]++;
+//     } else {
+//       result[char] = 1;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(charCount("brackets"));
+
+// OPTION 3: FOR...OF LOOP & HASOWNPROPERTY
 function charCount(str) {
   let result = {};
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
-    if (result[char]) {
+  for (let char of str) {
+    if (result.hasOwnProperty(char)) {
       result[char]++;
     } else {
       result[char] = 1;
@@ -46,4 +61,4 @@ function charCount(str) {
   return result;
 }
 
-console.log(charCount("interesting"));
+console.log(charCount("property"));
