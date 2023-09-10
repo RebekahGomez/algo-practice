@@ -23,13 +23,23 @@
 // console.log(reverseString("goodbye"));
 
 // OPTION 3 W/ DECREMENTING FOR LOOP
+// function reverseString(str) {
+//   let newString = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     newString += str[i];
+//   }
+//   let upperString = newString.toUpperCase("");
+//   return upperString;
+// }
+
+// console.log(reverseString("sayWhat"));
+
 function reverseString(str) {
-  let newString = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    newString += str[i];
+  if (str === "") {
+    return "";
+  } else {
+    return reverseString(str.substr(1)) + str.charAt(0).toUpperCase();
   }
-  let upperString = newString.toUpperCase("");
-  return upperString;
 }
 
-console.log(reverseString("sayWhat"));
+console.log(reverseString("hello"));
