@@ -35,13 +35,25 @@
 // The original array will not be modified.
 
 // OPTION 3 USING .SUBSTRING()
+// function removeEnds(str) {
+//   if (str.length < 3) {
+//     return "";
+//   }
+//   let result = str.substring(1, str.length - 1);
+//   return result;
+// }
+
+// console.log(removeEnds("gadzooks"));
+// .substring() requires the starting index and length instead of the endind index
+
+// OPTION 4 ARRAY DESTRUCTURING AND .JOIN()
 function removeEnds(str) {
   if (str.length < 3) {
     return "";
   }
-  let result = str.substring(1, str.length - 1);
-  return result;
+  let [, ...rest] = [...str];
+  rest.pop();
+  return rest.join("");
 }
 
-console.log(removeEnds("gadzooks"));
-// .substring() requires the starting index and length instead of the endind index
+console.log(removeEnds("tricky"));
