@@ -16,8 +16,20 @@
 // console.log(reverseUpcaseString("hello"));
 
 // OPTION 2 CHANING BUILT-IN METHODS
+// function reverseString(str) {
+//   return str.split("").reverse("").join("").toUpperCase("");
+// }
+
+// console.log(reverseString("goodbye"));
+
+// OPTION 3 W/ DECREMENTING FOR LOOP
 function reverseString(str) {
-  return str.split("").reverse("").join("").toUpperCase("");
+  let newString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  let upperString = newString.toUpperCase("");
+  return upperString;
 }
 
-console.log(reverseString("goodbye"));
+console.log(reverseString("sayWhat"));
