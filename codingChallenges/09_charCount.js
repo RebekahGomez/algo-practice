@@ -25,3 +25,9 @@ function charCount(str) {
 }
 
 console.log(charCount("interesting"));
+// charAt() is a method available to strings - it allows you to access a specific character in a string based on index
+// For each position "i" in the string "str" we're grabbing the character at that position
+// and storing it in the variable "char"
+// If the "char" already exists as a key in the "result" object, then we increase its value by 1
+// But if the "char" doesn't exist in the "result" object, then we add it as a new key
+// with a value of 1
