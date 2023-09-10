@@ -5,3 +5,17 @@
 // Examples:
 // removeEnds('SEI Rocks!'); //=> "EI Rocks"
 // removeEnds('a'); //=> "" (empty string)
+
+// OPTION 1 USING A FOR LOOP
+function removeEnds(str) {
+  if (str.length < 3) {
+    return "";
+  }
+  let result = "";
+  for (let i = 1; i < str.length - 1; i++) {
+    result += str[i];
+  }
+  return result;
+}
+
+console.log(removeEnds("hello"));
