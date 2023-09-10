@@ -62,3 +62,9 @@ function charCount(str) {
 }
 
 console.log(charCount("property"));
+// The for...of loop makes it easier to loop through iterable objects.
+// For each iteration of the loop "char" will take on the value of the next character in the string "str"
+// So you don't have to use indexing with bracket notation or charAt()
+// .hasOwnProperty() is a method that checks if the object has a specific property or key
+// It's used to differentiate between properties that are present on the object directly versus
+// those t hat might hbe inherited from the object's prototype chain.
