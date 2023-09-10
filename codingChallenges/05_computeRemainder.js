@@ -29,4 +29,11 @@ function computeRemainder(dividend, divisor) {
   return remainder;
 }
 
-console.log(computeRemainder(10.5, 2));
+console.log(computeRemainder(7, 3));
+
+// Math.floor(dividend / divisor) rounds the quotient down to the nearest whole number
+// 7/3 --> 2.333, with Math.floor output would be 2
+// Multiplying the divisor by the floored quotient gives the largest number less than the dividend that is a multiple of the divisor
+// 3(divisor) * 2 = 6
+// Subtracting the above product from the dividend gives you the remainder
+// 7(dividend) - 6 = 1, which is the remainder
