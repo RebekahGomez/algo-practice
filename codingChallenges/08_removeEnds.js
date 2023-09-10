@@ -57,3 +57,10 @@ function removeEnds(str) {
 }
 
 console.log(removeEnds("tricky"));
+// [...str] spreads the characters into an array
+// [, ...rest] the comma at the beginning skips the first character in the array
+// The ...rest gathers the remaining elements of the array into a new array called 'rest' but the
+// last character is still part of the string, so we need to .pop() it off
+// and return the remaining string w/out the 1st and last characters
+// Reminder: Spread: Breaks collections apart (like arrays or objects)
+// Rest: Gathers items together into a collection
