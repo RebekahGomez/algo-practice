@@ -34,12 +34,22 @@
 
 // console.log(reverseString("sayWhat"));
 
+// OPTION 4 W/ RECURSION
+// function reverseString(str) {
+//   if (str === "") {
+//     return "";
+//   } else {
+//     return reverseString(str.substr(1)) + str.charAt(0).toUpperCase();
+//   }
+// }
+
+// console.log(reverseString("hello"));
+
+// OPTION 5 TERNARY OPERATOR
 function reverseString(str) {
-  if (str === "") {
-    return "";
-  } else {
-    return reverseString(str.substr(1)) + str.charAt(0).toUpperCase();
-  }
+  return str === ""
+    ? ""
+    : reverseString(str.substr(1)) + str.charAt(0).toUpperCase();
 }
 
-console.log(reverseString("hello"));
+console.log(reverseString("yowzah"));
