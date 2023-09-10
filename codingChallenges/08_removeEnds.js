@@ -20,7 +20,7 @@
 
 // console.log(removeEnds("hello"));
 
-// OPTION 1 USING .SLICE()
+// OPTION 2 USING .SLICE()
 function removeEnds(str) {
   if (str.length < 3) {
     return "";
