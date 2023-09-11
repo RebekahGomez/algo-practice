@@ -27,4 +27,8 @@ function formatWithPadding(int1, char, int2) {
   return result;
 }
 
-console.log(formatWithPadding(22, "a", 3));
+console.log(formatWithPadding(2, "a", 3));
+// Keep in mind we have already converted int1 to a string, so we're comparing the length
+// of a string to the number in the 3rd argument, which is still an integer.
+// So if this is our output: console.log(formatWithPadding(2, "a", 3));
+// the length of the first argument (2) is just "1", compared to the integer "3" of the 3rd argument
