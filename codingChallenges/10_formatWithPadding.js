@@ -12,3 +12,15 @@
 // formatWithPadding(123, '0', 5); //=> "00123"
 // formatWithPadding(42, '*', 10); //=> "********42"
 // formatWithPadding(1234, '*', 3); //=> "1234"
+
+function formatWithPadding(int1, char, int2) {
+  let numString = int1.toString();
+
+  if (char.length > 1) {
+    return "Second argument must be a single character";
+  }
+  let result = numString.padStart(int2, char);
+  return result;
+}
+
+console.log(formatWithPadding(2, "a", 3));
