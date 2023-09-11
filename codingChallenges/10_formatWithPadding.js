@@ -16,6 +16,10 @@
 function formatWithPadding(int1, char, int2) {
   let numString = int1.toString();
 
+  if (numString.length >= int2) {
+    return numString;
+  }
+
   if (char.length > 1) {
     return "Second argument must be a single character";
   }
@@ -23,4 +27,4 @@ function formatWithPadding(int1, char, int2) {
   return result;
 }
 
-console.log(formatWithPadding(2, "a", 3));
+console.log(formatWithPadding(22, "a", 3));
