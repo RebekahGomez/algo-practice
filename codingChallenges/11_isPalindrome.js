@@ -9,3 +9,18 @@
 // isPalindrome('rotor'); //=> true
 // isPalindrome('A nut for a jar of tuna'); //=> true
 // isPalindrome(''); //=> true
+
+function isPalindrome(str) {
+  str = str.toLowerCase().replaceAll(" ", "");
+  if (str.length <= 1) {
+    return true;
+  }
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isPalindrome("helloh"));
