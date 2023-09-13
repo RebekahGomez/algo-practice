@@ -10,17 +10,36 @@
 // isPalindrome('A nut for a jar of tuna'); //=> true
 // isPalindrome(''); //=> true
 
+// OPTION 1 W/ A FOR LOOP COMPARING UP TO HALF THE LENGTH OF THE STRING
+// function isPalindrome(str) {
+//   str = str.toLowerCase().replaceAll(" ", "");
+//   if (str.length <= 1) {
+//     return true;
+//   }
+//   for (let i = 0; i < str.length / 2; i++) {
+//     if (str[i] !== str[str.length - 1 - i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isPalindrome("helloh"));
+
+// OPTION 2 W/ BUILT-IN METHODS
 function isPalindrome(str) {
-  str = str.toLowerCase().replaceAll(" ", "");
-  if (str.length <= 1) {
+  let newStr = str.toLowerCase().replaceAll(" ", "");
+  if (newStr.length <= 1) {
     return true;
   }
-  for (let i = 0; i < str.length / 2; i++) {
-    if (str[i] !== str[str.length - 1 - i]) {
-      return false;
-    }
+  let splitStr = newStr.split("");
+  let reverseArr = splitStr.reverse();
+  let newArr = reverseArr.join("");
+  if (newStr === newArr) {
+    return true;
+  } else {
+    return false;
   }
-  return true;
 }
 
-console.log(isPalindrome("helloh"));
+console.log(isPalindrome("helLO lleh"));
