@@ -12,17 +12,32 @@
 // hammingDistance('!!!!', '****'); //=> 4
 // hammingDistance('abc', 'ab'); //=> NaN
 
+// OPTION 1 USING FOR LOOP
+// function hammingDistance(str1, str2) {
+//   if (str1.length !== str2.length) {
+//     return NaN;
+//   }
+//   let count = 0;
+//   for (let i = 0; i < str1.length; i++) {
+//     if (str1[i] !== str2[i]) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(hammingDistance("abs", "abc"));
+
+// OPTION 2 USING CHARAT() METHOD
 function hammingDistance(str1, str2) {
   if (str1.length !== str2.length) {
     return NaN;
   }
   let count = 0;
   for (let i = 0; i < str1.length; i++) {
-    if (str1[i] !== str2[i]) {
-      count++;
-    }
+    if (str1.charAt(i) !== str2.charAt(i)) count++;
   }
   return count;
 }
 
-console.log(hammingDistance("abs", "abc"));
+console.log(hammingDistance("hello", "world"));
