@@ -11,20 +11,20 @@
 // isPalindrome(''); //=> true
 
 // OPTION 1 W/ A FOR LOOP COMPARING UP TO HALF THE LENGTH OF THE STRING
-// function isPalindrome(str) {
-//   str = str.toLowerCase().replaceAll(" ", "");
-//   if (str.length <= 1) {
-//     return true;
-//   }
-//   for (let i = 0; i < str.length / 2; i++) {
-//     if (str[i] !== str[str.length - 1 - i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
+function isPalindrome(str) {
+  str = str.toLowerCase().replaceAll(" ", "");
+  if (str.length <= 1) {
+    return true;
+  }
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
 
-// console.log(isPalindrome("helloh"));
+console.log(isPalindrome("helloh"));
 
 // OPTION 2 W/ BUILT-IN METHODS
 function isPalindrome(str) {
