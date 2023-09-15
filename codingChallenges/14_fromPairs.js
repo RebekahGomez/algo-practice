@@ -7,3 +7,22 @@
 // Examples:
 // fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) //=> { a: 1, b: 2, c: 3 }
 // fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sally", age: 24 }
+
+function fromPairs(arr) {
+  let result = {};
+  for (let i = 0; i < arr.length; i++) {
+    let key = arr[i][0];
+    let value = arr[i][1];
+    result[key] = value;
+  }
+  return result;
+}
+
+console.log(
+  fromPairs([
+    ["name", "Rebekah"],
+    ["age", 36],
+    ["location", "NYC"],
+    ["name", "Reebs"],
+  ])
+);
