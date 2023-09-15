@@ -11,18 +11,18 @@
 // mumble('!A 2'); //=> '!-AA-   -2222'
 
 // OPTION 1 W/ FOR LOOP
-// function mumble(str) {
-//   let result = "";
-//   for (let i = 0; i < str.length; i++) {
-//     result += str[i].repeat(i + 1);
-//     if (i !== str.length - 1) {
-//       result += "-";
-//     }
-//   }
-//   return result;
-// }
+function mumble(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    result += str[i].repeat(i + 1);
+    if (i !== str.length - 1) {
+      result += "-";
+    }
+  }
+  return result;
+}
 
-// console.log(mumble("abc"));
+console.log(mumble("abc"));
 
 // .repeat() method is used to construct and return a new string that contains a specified number of
 // copies of the original string. It concatenates th ese copies together. This method does not modify
@@ -42,3 +42,15 @@ function mumble(str) {
 }
 
 console.log(mumble("cba"));
+
+// .join() method is used to join the elements of an array into a string. The elements will be separated
+// by a specified seperator, and the resulting string is then returned.
+// arr.join([separator]); --> the separator is optional. It specifies a string to separate each pair of
+// adjacent elements of the array. If omitted, the array elements are separated with a comma (',').
+// If 'separator' is an empty string, all elements are joined without any characters between them.
+// EG:
+// let fruits = ['apple', 'banana', 'cherry'];
+// console.log(fruits.join()) --> Outputs: 'apple,banana,cherry'
+// console.log(fruits.join('')) --> Outputs: 'applebananacherry'
+// console.log(fruits.join(' ')) --> Outputs: 'apple banana cherry'
+// console.log(fruits.join('-')) --> Outputs: "apple-banana-cherry"
