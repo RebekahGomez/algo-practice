@@ -8,3 +8,16 @@
 // mergeObjects({}, {a: 1});  //=> {a: 1} (same object as first arg)
 // mergeObjects({a: 1, b: 2, c: 3}, {d: 4});  //=> {a: 1, b: 2, c: 3, d: 4}
 // mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c: 3, d: 44}
+
+function mergeObjects(...objects) {
+  if (objects.length === 0) {
+    return {};
+  }
+  let result = objects[0];
+  for (let i = 1; i < objects.length; i++) {
+    result = { ...result, ...objects[i] };
+  }
+  return result;
+}
+
+console.log(mergeObjects({ a: 0 }, { a: 1, b: 22 }));
