@@ -9,15 +9,26 @@
 // mergeObjects({a: 1, b: 2, c: 3}, {d: 4});  //=> {a: 1, b: 2, c: 3, d: 4}
 // mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});  //=> {a: 1, b: 22, c: 3, d: 44}
 
+// OPTION 1 W/ A FOR LOOP & SPREAD OPERATOR
+// function mergeObjects(...objects) {
+//   if (objects.length === 0) {
+//     return {};
+//   }
+//   let result = objects[0];
+//   for (let i = 1; i < objects.length; i++) {
+//     result = { ...result, ...objects[i] };
+//   }
+//   return result;
+// }
+
+// console.log(mergeObjects({ a: 0 }, { a: 1, b: 22 }));
+
+// OPTION 2 W/ OBJECT.ASSIGN()
 function mergeObjects(...objects) {
   if (objects.length === 0) {
     return {};
   }
-  let result = objects[0];
-  for (let i = 1; i < objects.length; i++) {
-    result = { ...result, ...objects[i] };
-  }
-  return result;
+  return Object.assign(...objects);
 }
 
-console.log(mergeObjects({ a: 0 }, { a: 1, b: 22 }));
+console.log(mergeObjects({ a: 13, b: 22 }, { c: 55, d: 12, a: 0 }));
