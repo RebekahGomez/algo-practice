@@ -27,7 +27,7 @@ function mapArray(arr, callback) {
 }
 
 console.log(
-  mapArray(["rose", "tulip", "sunflower"], function (f, i) {
-    return `${i + 1} - ${f}`;
+  mapArray(["rose", "tulip", "sunflower"], function (item, index) {
+    return `${index + 1} - ${item}`;
   })
 );
