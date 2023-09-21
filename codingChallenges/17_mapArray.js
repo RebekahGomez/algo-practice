@@ -5,7 +5,7 @@
 // - The mapArray function should return a new array of the same length as the array argument.
 // - The mapArray function should iterate over each element in the array(first arg).
 // For each iteration, invoke the callback function (2nd arg), passing to it as arguments,
-//   the current element and its index.Whatever is returned by the callback function should be included
+//   the current element and its index. Whatever is returned by the callback function should be included
 //     in the new array at the index of the current iteration.
 // Examples:
 // mapArray( [1, 2, 3], function(n) {
@@ -16,3 +16,18 @@
 //   return `${i + 1} - ${f}`;
 // } );
 // //=> ["1 - rose", "2 - tulip", "3 - daisy"]
+
+function mapArray(arr, callback) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    let result = callback(arr[i], i);
+    newArray.push(result);
+  }
+  return newArray;
+}
+
+console.log(
+  mapArray(["rose", "tulip", "sunflower"], function (f, i) {
+    return `${i + 1} - ${f}`;
+  })
+);
