@@ -28,7 +28,13 @@ console.log(
   })
 );
 
-// OPTION 1 W/ FOR LOOP
+// .map() creates a new array with the results of calling a provided function (in this
+// case 'callback) on every element in the calling array
+// You're creating and returning a new array where each item is the result
+// of the 'callback' function
+// It simplifies the process of iterating over an array and applying a transformation to each element
+
+// OPTION 2 W/ FOR LOOP
 function mapArray(arr, callback) {
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
@@ -44,7 +50,7 @@ console.log(
   })
 );
 
-// OPTION 2 W/ FOREACH
+// OPTION 3 W/ FOREACH
 function mapArray(arr, callback) {
   let result = [];
   arr.forEach(function (item, index) {
