@@ -17,6 +17,17 @@
 // } );
 // //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 
+// OPTION 1 STANDARD .MAP()
+function mapArray(arr, callback) {
+  return arr.map(callback);
+}
+
+console.log(
+  mapArray(["water", "coffee", "tea"], function (item, index) {
+    return `${index + 1} - ${item}`;
+  })
+);
+
 // OPTION 1 W/ FOR LOOP
 function mapArray(arr, callback) {
   let newArray = [];
@@ -43,7 +54,7 @@ function mapArray(arr, callback) {
 }
 
 console.log(
-  mapArray(["rose", "tulip", "sunflower"], function (item, index) {
+  mapArray(["fall", "winter", "spring"], function (item, index) {
     return `${index + 1} - ${item}`;
   })
 );
