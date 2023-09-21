@@ -18,20 +18,20 @@
 // //=> ["1 - rose", "2 - tulip", "3 - daisy"]
 
 // OPTION 1 W/ FOR LOOP
-// function mapArray(arr, callback) {
-//   let newArray = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     let result = callback(arr[i], i);
-//     newArray.push(result);
-//   }
-//   return newArray;
-// }
+function mapArray(arr, callback) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    let result = callback(arr[i], i);
+    newArray.push(result);
+  }
+  return newArray;
+}
 
-// console.log(
-//   mapArray(["rose", "tulip", "sunflower"], function (item, index) {
-//     return `${index + 1} - ${item}`;
-//   })
-// );
+console.log(
+  mapArray(["rose", "tulip", "sunflower"], function (item, index) {
+    return `${index + 1} - ${item}`;
+  })
+);
 
 // OPTION 2 W/ FOREACH
 function mapArray(arr, callback) {
