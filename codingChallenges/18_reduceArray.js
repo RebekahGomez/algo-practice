@@ -8,7 +8,7 @@
 // - The reduceArray function should iterate over each element in the array (first arg).
 // For each iteration, invoke the callback function (2nd arg), passing to it three arguments:
 // (1) the "accumulator", which is the value returned by the callback during the previous iteration;
-// (2) the  current element; and(3) the index of the current iteration.
+// (2) the  current element; and (3) the index of the current iteration.
 // - On the first iteration, provide the third argument provided to reduceArray
 // as the first argument when invoking the callback, then for subsequent iterations,
 // provide the value returned by the callback during the previous iteration.
@@ -18,12 +18,22 @@
 //   return acc + n;
 // }, 0);
 // //=> 6
+
 // reduceArray( [1, 2, 3], function(acc, n, i) {
 //   return acc + n + i;
 // }, 0);
 // //=> 9
+
 // reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //   acc[v] = acc[v] ? acc[v] + 1 : 1;
 //   return acc;
 // }, {} );
 // //=> {"Yes": 2, "No": 1, "Maybe": 1}
+
+// OPTION 1 STANDARD .REDUCE() METHOD
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce(function (accumulator, currentVal) {
+  return accumulator + currentVal;
+}, 0);
+
+console.log(sum);
