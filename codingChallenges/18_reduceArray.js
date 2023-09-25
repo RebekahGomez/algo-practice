@@ -33,18 +33,60 @@
 // //=> {"Yes": 2, "No": 1, "Maybe": 1}
 
 // OPTION 1 STANDARD .REDUCE() METHOD - returning the sum of an array
-const numbers = [1, 2, 3, 4];
-const sum = numbers.reduce(function (accumulator, currentVal) {
-  return accumulator + currentVal;
-}, 0);
+// const numbers = [1, 2, 3, 4];
+// const sum = numbers.reduce(function (accumulator, currentVal) {
+//   return accumulator + currentVal;
+// }, 0);
 
-console.log(sum);
+// console.log(sum);
 
-// OPTION 2 - STANDARD .REDUCE() USING EXAMPLE 3 FROM PROMPT
-const arr = ["yes", "no", "yes", "maybe"];
-const result = arr.reduce(function (acc, currentVal) {
-  acc[currentVal] = acc[currentVal] ? acc[currentVal] + 1 : 1;
-  return acc;
-}, {});
+// // OPTION 2 - STANDARD .REDUCE() USING EXAMPLE 3 FROM PROMPT
+// const arr = ["yes", "no", "yes", "maybe"];
+// const result = arr.reduce(function (acc, currentVal) {
+//   acc[currentVal] = acc[currentVal] ? acc[currentVal] + 1 : 1;
+//   return acc;
+// }, {});
 
-console.log(result);
+// console.log(result);
+
+// OPTION 3 - WITHOUT .REDUCE()
+function reduceArray(array, callback, initialValue) {
+  let accumulator = initialValue !== undefined ? initialValue : array[0];
+  let startIndex = initialValue !== undefined ? 0 : 1;
+
+  for (let i = startIndex; i < array.length; i++) {
+    accumulator = callback(accumulator, array[i], i, array);
+  }
+  return accumulator;
+}
+
+console.log(
+  reduceArray(
+    [1, 2, 3],
+    function (acc, n) {
+      return acc + n;
+    },
+    0
+  )
+);
+
+console.log(
+  reduceArray(
+    [1, 2, 3],
+    function (acc, n, i) {
+      return acc + n + i;
+    },
+    0
+  )
+);
+
+console.log(
+  reduceArray(
+    ["yes", "no", "yes", "maybe"],
+    function (acc, v) {
+      acc[v] = acc[v] ? acc[v] + 1 : 1;
+      return acc;
+    },
+    {}
+  )
+);
