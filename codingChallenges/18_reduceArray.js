@@ -31,6 +31,8 @@
 //   return acc;
 // }, {} );
 // //=> {"Yes": 2, "No": 1, "Maybe": 1}
+// This example, the array ['yes', 'no', 'yes', 'maybe'] is being reduced, but the initial value
+// is an empty object {}. The callback function is counting the occurances of each string in the array.
 
 // OPTION 1 STANDARD .REDUCE() METHOD - returning the sum of an array
 // const numbers = [1, 2, 3, 4];
@@ -49,15 +51,24 @@
 
 // console.log(result);
 
-// OPTION 3 - WITHOUT .REDUCE()
-function reduceArray(array, callback, initialValue) {
-  let accumulator = initialValue !== undefined ? initialValue : array[0];
-  let startIndex = initialValue !== undefined ? 0 : 1;
+// OPTION 3 - WITHOUT .REDUCE() USING FOR LOOP
+// function reduceArray(array, callback, initialValue) {
+//   let accumulator = initialValue !== undefined ? initialValue : array[0];
+//   let startIndex = initialValue !== undefined ? 0 : 1;
 
-  for (let i = startIndex; i < array.length; i++) {
-    accumulator = callback(accumulator, array[i], i, array);
-  }
-  return accumulator;
+//   for (let i = startIndex; i < array.length; i++) {
+//     accumulator = callback(accumulator, array[i], i, array);
+//   }
+//   return accumulator;
+// }
+
+// OPTION 4 USING .FOREACH()
+function reduceArray(arr, callback, initialAccumulator) {
+  let acc = initialAccumulator;
+  arr.forEach(function (element, index) {
+    acc = callback(acc, element, index);
+  });
+  return acc;
 }
 
 console.log(
