@@ -18,11 +18,13 @@
 //   return acc + n;
 // }, 0);
 // //=> 6
+// This example adds the accumulator and the currentValue (n)
 
 // reduceArray( [1, 2, 3], function(acc, n, i) {
 //   return acc + n + i;
 // }, 0);
 // //=> 9
+// This example adds the accumulator, currentValue (n), and the currentIndex (i)
 
 // reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 //   acc[v] = acc[v] ? acc[v] + 1 : 1;
@@ -30,10 +32,19 @@
 // }, {} );
 // //=> {"Yes": 2, "No": 1, "Maybe": 1}
 
-// OPTION 1 STANDARD .REDUCE() METHOD
+// OPTION 1 STANDARD .REDUCE() METHOD - returning the sum of an array
 const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce(function (accumulator, currentVal) {
   return accumulator + currentVal;
 }, 0);
 
 console.log(sum);
+
+// OPTION 2 - STANDARD .REDUCE() USING EXAMPLE 3 FROM PROMPT
+const arr = ["yes", "no", "yes", "maybe"];
+const result = arr.reduce(function (acc, currentVal) {
+  acc[currentVal] = acc[currentVal] ? acc[currentVal] + 1 : 1;
+  return acc;
+}, {});
+
+console.log(result);
