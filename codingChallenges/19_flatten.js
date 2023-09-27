@@ -14,3 +14,17 @@
 // //=> [1, 2, 3]  (a new array)
 // flatten( [1, [2, [3, [4]]], 1, 'a', ['b', 'c']] );
 // //=> [1, 2, 3, 4, 1, 'a', 'b', 'c']
+
+function flatten(arr) {
+  let result = [];
+  arr.forEach((item) => {
+    if (Array.isArray(item)) {
+      result = result.concat(flatten(item));
+    } else {
+      result.push(item);
+    }
+  });
+  return result;
+}
+
+console.log(flatten([1, [2, [3, [4]]], 1, "a", ["b", "c"]]));
