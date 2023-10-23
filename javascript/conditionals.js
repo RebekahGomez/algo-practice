@@ -64,7 +64,7 @@ function oddOrEven() {
   }
 }
 
-oddOrEven();
+// oddOrEven();
 
 /*
  * Prompt:
@@ -77,3 +77,19 @@ oddOrEven();
  *   - if b is between 50 and 75, print "upper quartile"
  *   - if b is between 75 and 100, print "top quartile"
  */
+
+let b = 100;
+
+function quartile() {
+  if (b < 25) {
+    console.log("bottom quartile");
+  } else if (b >= 25 && b < 50) {
+    console.log("lower quartile");
+  } else if (b >= 50 && b < 75) {
+    console.log("upper quartile");
+  } else {
+    console.log("top quartile");
+  }
+}
+
+quartile();
