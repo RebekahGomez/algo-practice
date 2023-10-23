@@ -19,7 +19,7 @@ function teenager() {
   }
 }
 
-teenager();
+// teenager();
 
 /*
  * Prompt:
@@ -31,6 +31,18 @@ teenager();
  *   console
  *   - otherwise, print "Not a little number!" to the console
  */
+
+let favoriteNumber = 47;
+
+function number() {
+  if (favoriteNumber < 10) {
+    console.log("A little number");
+  } else {
+    console.log("Not a little number");
+  }
+}
+
+number();
 
 /*
  * Prompt:
