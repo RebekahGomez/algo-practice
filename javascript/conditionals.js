@@ -42,7 +42,7 @@ function number() {
   }
 }
 
-number();
+// number();
 
 /*
  * Prompt:
@@ -53,6 +53,18 @@ number();
  *   result is even"
  *   - otherwise, print "After running our calculations, the result is odd"
  */
+
+let a = 14;
+
+function oddOrEven() {
+  if ((a * 3) % 2 === 0) {
+    console.log("This number is even");
+  } else {
+    console.log("This number is odd");
+  }
+}
+
+oddOrEven();
 
 /*
  * Prompt:
