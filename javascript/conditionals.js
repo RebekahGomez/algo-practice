@@ -7,6 +7,20 @@
  *   - if age is less than or equal 19, print "You're still a teenager!"
  */
 
+let age = 20;
+
+function teenager() {
+  if (age <= 19 && age >= 13) {
+    console.log("You're still a teenager");
+  } else if (age <= 12) {
+    console.log("You're not a teenager yet.");
+  } else {
+    console.log("You're not a teenager anymore!");
+  }
+}
+
+teenager();
+
 /*
  * Prompt:
  *
