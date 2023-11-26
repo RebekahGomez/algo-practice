@@ -21,12 +21,25 @@
 // Output
 // 5000000015
 
+// SIMPLY RETURN SUM OF ARRAY
 function aVeryBigSum(arr) {
   let solution = 0;
   for (let i = 0; i < arr.length; i++) {
     solution += arr[i];
   }
   return solution;
+}
+
+// REDUCE METHOD AS REGULAR FUNCTION
+function aVeryBigSum(arr) {
+  return arr.reduce(function (acc, curr) {
+    return acc + curr;
+  });
+}
+
+// REDUCE METHOD AS ARROW FUNCTION
+function aVeryBigSum(arr) {
+  return arr.reduce((acc, curr) => acc + curr);
 }
 
 console.log(aVeryBigSum([100000001, 100000002, 100000003]));
