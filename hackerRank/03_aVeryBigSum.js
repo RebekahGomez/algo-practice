@@ -30,7 +30,7 @@ function aVeryBigSum(arr) {
   return solution;
 }
 
-// REDUCE METHOD AS REGULAR FUNCTION
+// // REDUCE METHOD AS REGULAR FUNCTION
 function aVeryBigSum(arr) {
   return arr.reduce(function (acc, curr) {
     return acc + curr;
