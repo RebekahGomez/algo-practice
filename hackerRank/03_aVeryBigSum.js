@@ -20,3 +20,13 @@
 // 1000000001 1000000002 1000000003 1000000004 1000000005
 // Output
 // 5000000015
+
+function sumArray(arr) {
+  let solution = 0;
+  for (let i = 0; i < arr.length; i++) {
+    solution += arr[i];
+  }
+  return solution;
+}
+
+console.log(sumArray([100000001, 100000002, 100000003]));
