@@ -21,7 +21,7 @@
 // Output
 // 5000000015
 
-function sumArray(arr) {
+function aVeryBigSum(arr) {
   let solution = 0;
   for (let i = 0; i < arr.length; i++) {
     solution += arr[i];
@@ -29,4 +29,4 @@ function sumArray(arr) {
   return solution;
 }
 
-console.log(sumArray([100000001, 100000002, 100000003]));
+console.log(aVeryBigSum([100000001, 100000002, 100000003]));
