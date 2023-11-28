@@ -34,3 +34,26 @@ console.log(
     [9, 8, 9],
   ])
 );
+
+// To clean it up visually, you can make arr.length a variable
+// Calculate the absolute difference between
+// the sum of the diagonals in a square matrix
+function diagonalDifference(arr) {
+  let leftToRight = 0;
+  let rightToLeft = 0;
+  let n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    leftToRight += arr[i][i];
+    rightToLeft += arr[i][n - 1 - i];
+  }
+  return Math.abs(leftToRight - rightToLeft);
+}
+
+console.log(
+  diagonalDifference([
+    [75, 2, 66],
+    [4, 6, 6],
+    [9, 8, 12],
+  ])
+);
