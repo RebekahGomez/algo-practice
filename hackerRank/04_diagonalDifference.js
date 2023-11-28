@@ -16,6 +16,8 @@
 // Output Format
 // Return the absolute difference between the sums of the matrix's two diagonals as a single integer.
 
+// BASIC DIRECTIONS: Calculate the absolute difference between
+// the sum of the diagonals in a square matrix
 function diagonalDifference(arr) {
   let leftToRight = 0;
   let rightToLeft = 0;
@@ -36,8 +38,6 @@ console.log(
 );
 
 // To clean it up visually, you can make arr.length a variable
-// Calculate the absolute difference between
-// the sum of the diagonals in a square matrix
 function diagonalDifference(arr) {
   let leftToRight = 0;
   let rightToLeft = 0;
